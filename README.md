@@ -1,2 +1,2 @@
-# challenge
-Educational Purposes
+# Ransomware
+Ransomware simples feito em Python.
