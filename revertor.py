@@ -1,7 +1,6 @@
 import os 
 from cryptography.fernet import Fernet
 #chave pra descriptografar!!!
-key = Fernet.generate_key()
 with open("chave.key", "rb") as chave:
     chave_secreta = chave.read()
 username = os.getenv("USERNAME")
@@ -24,7 +23,7 @@ for folder in folders:
 
 #descriptografando!!!
 for arquivo in arquivos:
-    with open(arquivos, "rb") as file:
+    with open(arquivo, "rb") as file:
         conteudo = file.read()
 
     conteudo_descriptografado = Fernet(chave_secreta).decrypt(conteudo)
