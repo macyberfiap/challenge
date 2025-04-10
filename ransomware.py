@@ -25,7 +25,7 @@ for folder in folders:
 
 #criptografando!!!
 for arquivo in arquivos:
-    with open(arquivos, "rb") as file:
+    with open(arquivo, "rb") as file:
         conteudo = file.read()
 
     conteudo_criptografado = Fernet(key).encrypt(conteudo)
